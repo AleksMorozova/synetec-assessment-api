@@ -13,7 +13,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SynetecAssessment.Persistence\SynetecAssessmentApi.Persistence.csproj" />
+    <ProjectReference Include="..\SynetecAssessmentApi.BusinessLogic\SynetecAssessmentApi.BusinessLogic.csproj" />
     <ProjectReference Include="..\SynetecAssessmentApi.Domain\SynetecAssessmentApi.Domain.csproj" />
+    <ProjectReference Include="..\SynetecAssessmentApi.Model\SynetecAssessmentApi.Model.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace SynetecAssessmentApi.Dtos
+﻿namespace SynetecAssessmentApi.Model
 {
     public class EmployeeDto
     {

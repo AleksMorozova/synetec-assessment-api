@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi", "SynetecAssessmentApi\SynetecAssessmentApi.csproj", "{5BCB6360-6A89-4338-9863-7455B8480B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SynetecAssessmentApi", "SynetecAssessmentApi\SynetecAssessmentApi.csproj", "{5BCB6360-6A89-4338-9863-7455B8480B20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi.Domain", "SynetecAssessmentApi.Domain\SynetecAssessmentApi.Domain.csproj", "{7B58C9C7-0C36-49AE-B472-ADF9C00B61D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SynetecAssessmentApi.Domain", "SynetecAssessmentApi.Domain\SynetecAssessmentApi.Domain.csproj", "{7B58C9C7-0C36-49AE-B472-ADF9C00B61D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi.Persistence", "SynetecAssessment.Persistence\SynetecAssessmentApi.Persistence.csproj", "{72F75F99-9031-4DD6-B646-4926BC527038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SynetecAssessmentApi.Persistence", "SynetecAssessment.Persistence\SynetecAssessmentApi.Persistence.csproj", "{72F75F99-9031-4DD6-B646-4926BC527038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi.BusinessLogic", "SynetecAssessmentApi.BusinessLogic\SynetecAssessmentApi.BusinessLogic.csproj", "{DBE4DE5E-621E-4696-A5D8-AC52C1024A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi.Model", "SynetecAssessmentApi.Model\SynetecAssessmentApi.Model.csproj", "{0735FEF4-CCFA-4BC9-8DD0-08A984AA4F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynetecAssessmentApi.Tests", "SynetecAssessmentApi.Tests\SynetecAssessmentApi.Tests.csproj", "{C018D343-0B1B-42BE-9A92-5FFD65C54AA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{72F75F99-9031-4DD6-B646-4926BC527038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F75F99-9031-4DD6-B646-4926BC527038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F75F99-9031-4DD6-B646-4926BC527038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE4DE5E-621E-4696-A5D8-AC52C1024A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE4DE5E-621E-4696-A5D8-AC52C1024A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE4DE5E-621E-4696-A5D8-AC52C1024A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE4DE5E-621E-4696-A5D8-AC52C1024A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0735FEF4-CCFA-4BC9-8DD0-08A984AA4F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0735FEF4-CCFA-4BC9-8DD0-08A984AA4F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0735FEF4-CCFA-4BC9-8DD0-08A984AA4F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0735FEF4-CCFA-4BC9-8DD0-08A984AA4F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C018D343-0B1B-42BE-9A92-5FFD65C54AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C018D343-0B1B-42BE-9A92-5FFD65C54AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C018D343-0B1B-42BE-9A92-5FFD65C54AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C018D343-0B1B-42BE-9A92-5FFD65C54AA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

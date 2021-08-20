@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SynetecAssessment.Persistence\SynetecAssessmentApi.Persistence.csproj" />
+    <ProjectReference Include="..\SynetecAssessmentApi.Model\SynetecAssessmentApi.Model.csproj" />
+  </ItemGroup>
+
+</Project>

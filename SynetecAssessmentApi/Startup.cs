@@ -5,7 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SynetecAssessmentApi.BusinessLogic.Interfaces;
+using SynetecAssessmentApi.BusinessLogic.Services;
 using SynetecAssessmentApi.Persistence;
+using SynetecAssessmentApi.Persistence.Interfaces;
+using SynetecAssessmentApi.Persistence.Repositories;
 
 namespace SynetecAssessmentApi
 {
@@ -21,6 +25,11 @@ namespace SynetecAssessmentApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IBonusPoolService, BonusPoolService>();
+
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

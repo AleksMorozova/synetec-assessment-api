@@ -1,29 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SynetecAssessmentApi.Dtos;
-using SynetecAssessmentApi.Services;
+using SynetecAssessmentApi.BusinessLogic.Interfaces;
+using SynetecAssessmentApi.Model;
 using System.Threading.Tasks;
 
 namespace SynetecAssessmentApi.Controllers
 {
     [Route("api/[controller]")]
-    public class BonusPoolController : Controller
+    public class BonusPoolController : ControllerBase
     {
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var bonusPoolService = new BonusPoolService();
+        private readonly IBonusPoolService bonusPoolService;
 
-            return Ok(await bonusPoolService.GetEmployeesAsync());
+        public BonusPoolController(IBonusPoolService bonusPoolService)
+        {
+            this.bonusPoolService = bonusPoolService;
         }
 
+        // TODO: Extract separate model for aapi and provide it validation
         [HttpPost()]
         public async Task<IActionResult> CalculateBonus([FromBody] CalculateBonusDto request)
         {
-            var bonusPoolService = new BonusPoolService();
+            if (request.SelectedEmployeeId == 0)
+            {
+                return BadRequest("Employee id doesn't specified");
+            }
 
-            return Ok(await bonusPoolService.CalculateAsync(
-                request.TotalBonusPoolAmount,
-                request.SelectedEmployeeId));
+            var result = await bonusPoolService.CalculateAsync(request.TotalBonusPoolAmount, request.SelectedEmployeeId);
+
+            if (!result.IsSucceed)
+            {
+                return BadRequest("Problem with bonus calculation:" + result.ErrorMessage);
+            }
+            return Ok(result.Value);
         }
     }
 }
